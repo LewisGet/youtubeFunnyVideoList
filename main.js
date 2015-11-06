@@ -90,6 +90,8 @@ ljFunny.init = function() {
     {
         console.log(ljFunny.consolePrint);
     }
+
+    return "Let's get happy! : )";
 };
 
 ljFunny.init();
