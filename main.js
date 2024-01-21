@@ -21,15 +21,14 @@ ljFunny.observeVideoList = function () {
         });
     });
 
-    target = ljFunny.videos[0].parentNode;
-
     config = {childList: true};
 
-    observer.observe(target, config);
+    observer.observe(ljFunny.videoList, config);
 };
 
 ljFunny.getAllVideo = function () {
-    ljFunny.videos = document.getElementsByTagName(ljFunny.videoNodeName);
+    ljFunny.videoList = document.querySelector("#items.ytd-watch-next-secondary-results-renderer");
+    ljFunny.videos = ljFunny.videoList.getElementsByClassName("style-scope ytd-watch-next-secondary-results-renderer");
 };
 
 ljFunny.updateLeft = function (video, value) {
