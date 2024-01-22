@@ -16,12 +16,15 @@ ljFunny.observeVideoList = function () {
     let observer = new MutationObserver(function(m) {
         m.forEach(function(m) {
             ljFunny.getAllVideo();
-
             ljFunny.addEventHover();
         });
     });
 
-    target = ljFunny.videos[0].parentNode;
+    try {
+        target = ljFunny.videos[0].parentNode;
+    } catch {
+        return false;
+    };
 
     config = {childList: true};
 
